@@ -35,12 +35,12 @@ env:
 ## env_stop - 停止本地开发环境，关闭开发环境容器
 .PHONY: env_stop
 env_stop:
-	@docker-compose -f dev/docker-compose.yml -p $(PRO_NAME) stop
+	@docker compose -f dev/docker-compose.yml -p $(PRO_NAME) stop
 
 ## env_down - 删除本地开发环境
 .PHONY: env_down
 env_down:
-	@docker-compose -f dev/docker-compose.yml -p $(PRO_NAME) down
+	@docker compose -f dev/docker-compose.yml -p $(PRO_NAME) down
 
 ## test - 单元测试
 .PHONY: test
